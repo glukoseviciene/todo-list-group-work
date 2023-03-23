@@ -1,0 +1,15 @@
+Task: Build a To-Do List Application with User Authentication and Edit FunctionalityUse GIT. 
+Create/Review Pull requests for merging to master(main branch). 
+New branch for every code change.
+
+1. Design the layout of the application and create wireframes (All)
+2. Write the HTML and CSS for the main page that displays tasks (Person B)
+3. Implement user authentication and registration functionality using 
+JavaScript and localStorage (Person A)
+4. Develop a function for checking off completed tasks (Person B)
+5. Write a function for deleting completed tasks (Person A)
+6. Develop a feature for editing tasks in place, only available when logged in (Person B)
+7. Write unit tests for the task addition, deletion, and editing functions (Person C)
+8. Add a feature for marking tasks as favorites, only available when logged in (Person C)
+9. Test the favorite functionality and fix any bugs or issues (Person C)
+10. Deploy the application to a production environment and test functionality when logged in (All)
