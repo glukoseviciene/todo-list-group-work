@@ -239,7 +239,7 @@ input:checked ~ .bubble::after {
 				background-color: var(--danger);
 			}
 		}
-		
+
 		&.done {
 			.todo-content {
 				input {
@@ -250,4 +250,3 @@ input:checked ~ .bubble::after {
 		}
 	}
 }
-
