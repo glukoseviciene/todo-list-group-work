@@ -1,9 +1,9 @@
 /* Variables */
 :root {
-  --primary: #F2921D;
-  --business: #A61F69;
+  --primary: #f2921d;
+  --business: #a61f69;
   --personal: var(--primary);
-  --light: #EEE;
+  --light: #eee;
   --grey: #888;
   --dark: #313154;
   --danger: #ff5b57;
@@ -21,7 +21,8 @@
   font-family: "montserrat", sans-serif;
 }
 
-input:not([type=radio]):not([type=checkbox]), button {
+input:not([type=radio]):not([type=checkbox]),
+button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -105,7 +106,7 @@ h4 {
   font-size: 1.125rem;
   padding: 1rem 1.5rem;
   color: var(--dark);
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
   margin-bottom: 1.5rem;
@@ -121,7 +122,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #FFF;
+  background-color: #fff;
   padding: 1.5rem;
   box-shadow: var(--shadow);
   border-radius: 0.5rem;
@@ -195,6 +196,8 @@ input:checked ~ .bubble::after {
 
 .todo-list {
   padding-bottom: 0.5rem;
+  /* Star check */
+  /* start todo-list buttons */
 }
 .todo-list .list {
   margin: 1rem 0;
@@ -204,7 +207,7 @@ input:checked ~ .bubble::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FFF;
+  background-color: #fff;
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
@@ -230,7 +233,7 @@ input:checked ~ .bubble::after {
   display: block;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
@@ -249,4 +252,22 @@ input:checked ~ .bubble::after {
 .todo-list .todo-item.done .todo-content input {
   text-decoration: line-through;
   color: var(--grey);
+}
+.todo-list .todo-listBtns {
+  display: flex;
+  margin: auto;
+  gap: 20px;
+}
+.todo-list .btn-todoList:hover {
+  background: var(--business);
+  transition: 0.3;
+}
+
+.btn-todoList {
+  background: var(--primary);
+  padding: 4px;
+  border-radius: 12px;
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
