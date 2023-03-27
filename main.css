@@ -1,15 +1,15 @@
 /* Variables */
 :root {
-  --primary: #EA40A4;
-  --business: #3a82ee;
+  --primary: #F2921D;
+  --business: #A61F69;
   --personal: var(--primary);
   --light: #EEE;
   --grey: #888;
   --dark: #313154;
   --danger: #ff5b57;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-  --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+  --business-glow: 0px 0px 4px rgba(166, 31, 105, 0.75);
+  --personal-glow: 0px 0px 4px rgba(242, 146, 29, 0.75);
 }
 
 /* End of Variables */
@@ -33,8 +33,16 @@ input:not([type=radio]):not([type=checkbox]), button {
 
 /* End of Resets */
 body {
+  position: absolute;
+  left: 0;
+  right: 0;
   background: var(--light);
   color: var(--dark);
+  width: -moz-max-content;
+  width: max-content;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f8de92;
 }
 
 section {
@@ -56,6 +64,27 @@ h4 {
   font-size: 0.875rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: 1470px;
+  min-height: 100%;
+}
+
+.app {
+  position: relative;
+  max-width: 700px;
+  height: auto;
+  background-color: rgba(238, 238, 238, 0.8);
+  border-radius: 0.5rem;
+  margin-inline: 20px;
+  margin-top: 12rem;
 }
 
 .greeting .title {
@@ -108,7 +137,7 @@ h4 {
   width: 100%;
   font-size: 1.125rem;
   padding: 1rem 1.5rem;
-  color: #FFF;
+  color: var(--dark);
   font-weight: 700;
   text-transform: uppercase;
   background-color: var(--primary);
@@ -164,6 +193,9 @@ input:checked ~ .bubble::after {
   opacity: 1;
 }
 
+.todo-list {
+  padding-bottom: 0.5rem;
+}
 .todo-list .list {
   margin: 1rem 0;
 }
@@ -208,9 +240,11 @@ input:checked ~ .bubble::after {
 .todo-list .todo-item .actions .edit {
   margin-right: 0.5rem;
   background-color: var(--primary);
+  color: var(--dark);
 }
 .todo-list .todo-item .actions .delete {
   background-color: var(--danger);
+  color: var(--dark);
 }
 .todo-list .todo-item.done .todo-content input {
   text-decoration: line-through;
