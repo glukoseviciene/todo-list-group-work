@@ -1,150 +1,172 @@
 /* Variables */
 :root {
-    --primary: #f2921d;
-    --business: #a61f69;
-    --personal: var(--primary);
-    --light: #eee;
-    --grey: #888;
-    --dark: #313154;
-    --danger: #ff5b57;
-  
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  
-    --business-glow: 0px 0px 4px rgba(166, 31, 105, 0.75);
-    --personal-glow: 0px 0px 4px rgba(242, 146, 29, 0.75);
-  }
-  /* End of Variables */
-  
-  /* Resets */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "montserrat", sans-serif;
-  }
-  
-  input:not([type="radio"]):not([type="checkbox"]),
-  button {
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: initial;
-  }
-  /* End of Resets */
-  
-  body {
-    position: absolute;
-    left: 0;
-    right: 0;
-    background: var(--light);
-    color: var(--dark);
-    width: max-content;
-    height: 100vh;
-    width: 100vw;
-    background-color: #f8de92;
-  }
-  
-  section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  h3 {
-    color: var(--dark);
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-  }
-  
-  h4 {
-    color: var(--grey);
-    font-size: 0.875rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-  
-  #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: fit-content;
-    min-width: 1470px;
-    min-height: 100%;
-  }
-  
-  .app {
-    position: relative;
-    max-width: 500px;
-    height: auto;
-    background-color: rgba(238, 238, 238, 0.8);
-    border-radius: 0.5rem;
-    margin-inline: 20px;
-    margin-top: 12rem;
-  }
-  
-  .greeting {
-    width: 100%;
-    text-align: center;
-    .title {
-      min-width: 0;
-      color: var(--dark);
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-  }
-  
-  .create-user {
+  --primary: #f2921d;
+  --business: #a61f69;
+  --personal: var(--primary);
+  --light: #eee;
+  --grey: #888;
+  --dark: #313154;
+  --danger: #ff5b57;
 
-    #form-login {
-      display: block;
-      width: 100%;
-      font-size: 1.125rem;
-      padding: 1rem 1.5rem;
-      color: var(--dark);
-      box-shadow: var(--shadow);
-      margin-bottom: 1.5rem;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-      .input-container {
-        max-width: 20rem;
-        margin-block: 1rem 1.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items:flex-start;
+  --business-glow: 0px 0px 4px rgba(166, 31, 105, 0.75);
+  --personal-glow: 0px 0px 4px rgba(242, 146, 29, 0.75);
+}
+/* End of Variables */
 
-        input {
-            width: 15rem;
-            border: 2px solid var(--business);
-            box-shadow: var(--business-glow);
-            color: var(--dark);
-            font-size: 1.125rem;
-            margin-block: 10px;
-        }
-      }
-    }
-  
-    input[type="submit"] {
-      display: block;
-      width: 100%;
-      font-size: 1.125rem;
-      padding: 1rem 1.5rem;
-      color: var(--dark);
-      font-weight: 700;
-      text-transform: uppercase;
-      background-color: var(--primary);
-      box-shadow: var(--personal-glow);
-      border-radius: 0.5rem;
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: initial;
+}
+/* End of Resets */
+
+body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: var(--light);
+  color: var(--dark);
+  width: max-content;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f8de92;
+}
+
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+h3 {
+  color: var(--dark);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  color: var(--grey);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: fit-content;
+  min-width: 1470px;
+  min-height: 100%;
+}
+
+.app {
+  position: relative;
+  max-width: 500px;
+  height: auto;
+  background-color: rgba(238, 238, 238, 0.8);
+  border-radius: 0.5rem;
+  margin-inline: 20px;
+  margin-top: 12rem;
+  margin: auto;
+
+  .chooseWhichForm {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: auto;
+
+    button {
+      padding: 10px;
+      background: var(--primary);
+      border-radius: 4px;
+      transition: 0.3s ease;
       cursor: pointer;
-      transition: 0.2s ease-out;
-      margin-block: 1rem
     }
-  
-    input[type="submit"]:hover {
+
+    button:hover {
       opacity: 0.75;
     }
+  }
 }
-  
+
+.greeting {
+  width: 100%;
+  text-align: center;
+  .title {
+    min-width: 0;
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+.create-user {
+  #form-login {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: var(--dark);
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+
+    .input-container {
+      max-width: 20rem;
+      margin-block: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      input {
+        width: 15rem;
+        border: 2px solid var(--business);
+        box-shadow: var(--business-glow);
+        color: var(--dark);
+        font-size: 1.125rem;
+        margin-block: 10px;
+      }
+    }
+  }
+
+  input[type="button"] {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: var(--dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--primary);
+    box-shadow: var(--personal-glow);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+    margin-block: 1rem;
+  }
+
+  input[type="button"]:hover {
+    opacity: 0.75;
+  }
+}
+
+#pw_confirmOnOff {
+  display: none;
+}
