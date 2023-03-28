@@ -82,7 +82,7 @@
       </div> -->
     <!-- </div> -->
 
-    <section class="end"></section> -->
+    <section class="end"></section>
 
       <!-- Background Video -->
       <video autoplay muted loop id="myVideo">
@@ -92,32 +92,39 @@
       <main class="app">
         <!-- Greeting -->
         <section class="greeting">
-          <h1 class="title">
-            Sign Up ✍️
+          <h1 id="greetingTitle" class="title">
+            Log in ✍️
           </h1>
         </section>
         <!-- End of Greeting -->
-  
+        <div class="chooseWhichForm">
+        <button id="chooseRegisterForm">Register</button>
+        <button id="chooseLoginForm">Login</button>
+      </div>
         <!-- New User -->
         <section class="create-user">
 
           <form id="form-login">
-            <div class="input-container">
+            <div id="input_container" class="input-container">
               <label for="name">Email</label>
               <input type="email" id="name" placeholder="Username" required />
 
               <label for="pw">Password</label>
               <input type="password" id="pw" placeholder="Password" required />
+              <div id="pw_confirmOnOff">
+              <label for="pw">Confirm Password</label>
+              <input type="password" id="pw_confirm" placeholder="Password" required />
+              </div>
             </div>
 
-            <ul class="helper-text">
+            <ul id="helperText" class="helper-text">
               <li class="length">Must be at least 8 characters long.</li>
               <li class="uppercase">Must contain an uppercase letter.</li>
               <li class="special">
                 Must contain a number or special character.
               </li>
             </ul>
-            <input
+            <!-- <input
             class="loginRegisterBtns"
             id="rgstr_btn"
             type="button"
@@ -128,14 +135,15 @@
             id="login_btn"
             type="button"
             value="Login"
-          />
+          /> -->
+          <input type="button" id="submit_btn" class="loginRegisterBtns" value="Confirm">
         </section>
         <!-- End of New User -->
       </main>
       <!-- End of App Wrapper -->
   
       <!-- JS Import -->
-      <script src="main.js"></script>
+      <!-- <script src="main.js"></script> -->
       <!-- End of JS Import -->
 
     <script src="index.js"></script>
