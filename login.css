@@ -21,11 +21,11 @@
   font-family: "montserrat", sans-serif;
 }
 
-input:not([type=radio]):not([type=checkbox]),
+input:not([type="radio"]):not([type="checkbox"]),
 button {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   outline: none;
   background: none;
@@ -124,7 +124,7 @@ h4 {
   font-size: 1.125rem;
   margin-block: 10px;
 }
-.create-user input[type=submit] {
+.create-user input[type="button"] {
   display: block;
   width: 100%;
   font-size: 1.125rem;
@@ -139,6 +139,6 @@ h4 {
   transition: 0.2s ease-out;
   margin-block: 1rem;
 }
-.create-user input[type=submit]:hover {
+.create-user input[type="submit"]:hover {
   opacity: 0.75;
-}/*# sourceMappingURL=login.css.map */
+} /*# sourceMappingURL=login.css.map */
