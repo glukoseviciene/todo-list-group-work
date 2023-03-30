@@ -87,6 +87,7 @@ h4 {
   margin-inline: 20px;
   margin-top: 12rem;
   margin: auto;
+  box-shadow: 7px 7px rgba(72, 72, 70, 0.578);
 }
 .app .chooseWhichForm {
   display: flex;
@@ -96,13 +97,14 @@ h4 {
 }
 .app .chooseWhichForm button {
   padding: 10px;
-  background: var(--primary);
+ background: orange;
   border-radius: 4px;
   transition: 0.3s ease;
   cursor: pointer;
+  box-shadow: 10px 5px rgba(62, 45, 45, 0.48);
 }
 .app .chooseWhichForm button:hover {
-  opacity: 0.75;
+  opacity: 1;
 }
 
 .greeting {
@@ -155,6 +157,7 @@ h4 {
   cursor: pointer;
   transition: 0.2s ease-out;
   margin-block: 1rem;
+  box-shadow: 10px 7px rgba(45, 46, 62, 0.48);
 }
 .create-user input[type=button]:hover {
   opacity: 0.75;

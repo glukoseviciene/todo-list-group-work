@@ -6,15 +6,15 @@ const greetingTitle = document.getElementById("greetingTitle");
 const input_container = document.getElementById("input_container");
 const pw_confirmOnOff = document.getElementById("pw_confirmOnOff");
 
-chooseLoginForm.style.opacity = "0.75";
+chooseRegisterForm.style.opacity = "0.60";
 helperText.style.display = "none";
 chooseLoginForm.addEventListener("click", (e) => {
   e.preventDefault();
   helperText.style.display = "none";
   greetingTitle.innerHTML = "Log in";
   submitBtn.setAttribute("id", "login_btn");
-  chooseLoginForm.style.opacity = "0.75";
-  chooseRegisterForm.style.opacity = "1";
+  chooseLoginForm.style.opacity = "1";
+  chooseRegisterForm.style.opacity = "0.60";
   pw_confirmOnOff.style.display = "none";
 });
 
@@ -23,8 +23,8 @@ chooseRegisterForm.addEventListener("click", (e) => {
   helperText.style.display = "block";
   greetingTitle.innerHTML = "Sign up";
   submitBtn.setAttribute("id", "rgstr_btn");
-  chooseRegisterForm.style.opacity = "0.75";
-  chooseLoginForm.style.opacity = "1";
+  chooseRegisterForm.style.opacity = "1";
+  chooseLoginForm.style.opacity = "0.60";
   pw_confirmOnOff.style.display = "block";
 });
 
