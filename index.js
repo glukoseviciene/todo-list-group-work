@@ -31,6 +31,7 @@ chooseRegisterForm.addEventListener("click", (e) => {
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   let nickname = document.getElementById("name").value;
+  localStorage.setItem("username", nickname);
   let pw = document.getElementById("pw").value;
   let pwConfirm = document.getElementById("pw_confirm").value;
   const peopleArray = JSON.parse(localStorage.getItem("nameAndPassword")) || [];
