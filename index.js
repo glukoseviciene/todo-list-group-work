@@ -34,10 +34,43 @@ submitBtn.addEventListener("click", (e) => {
   let pw = document.getElementById("pw").value;
   let pwConfirm = document.getElementById("pw_confirm").value;
   const peopleArray = JSON.parse(localStorage.getItem("nameAndPassword")) || [];
+  // CONFIRM CHECK
   if (submitBtn.getAttribute("id") === "rgstr_btn") {
-    if (pw !== pwConfirm) {
-      console.log("Passwords do not match");
-      alert("pw nematchina");
+    // PASSWORDS
+    let format = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/.test(pw);
+    if (!format) {
+      alert("Check your password format")
+      return;
+    }
+    else if (pw !== pwConfirm) {
+      alert("Passwords do not match");
+      let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
+      let pwConfirm = document.getElementById("pw_confirm").style.border = "2px solid var(--business)";
+      return;
+    }
+    else if ((pw.length < 8) && (pwConfirm.length < 8)) {
+      alert("Must be atleast 8 characters long");
+      let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
+      let pwConfirm = document.getElementById("pw_confirm").style.border = "2px solid var(--business)";
+      return;
+    }
+    else if(pw == "") {
+      alert("Please enter Password");
+      let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
+      let pwConfirm = document.getElementById("pw_confirm").style.border = "2px solid var(--business)";
+      return;
+    }
+    else if((pw == "") && (nickname == "")) {
+      alert("Please enter Username and Password");
+      let nickname = document.getElementById("name").style.border = "2px solid var(--business)";
+      let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
+      let pwConfirm = document.getElementById("pw_confirm").style.border = "2px solid var(--business)";
+      return;
+    }
+    // NICKNAME
+    else if(nickname == "") {
+      alert("Please enter Username");
+      let nickname = document.getElementById("name").style.border = "2px solid var(--business)";
       return;
     }
     const peopleData = {
@@ -50,6 +83,7 @@ submitBtn.addEventListener("click", (e) => {
     alert("Priregistruota");
   } else {
     for (i = 0; i < peopleArray.length; i++) {
+
       if (peopleArray[i].name === nickname) {
         if (peopleArray[i].password === pw) {
           console.log("Prijungta");
@@ -57,121 +91,17 @@ submitBtn.addEventListener("click", (e) => {
           break;
         } else {
           console.log("Blogas pw");
-          alert("Blogas pw");
+          alert("Incorrect or empty password");
+          let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
           break;
         }
+        
       } else if (i === peopleArray.length - 1) {
-        console.log("Nera tokio user");
-        alert("Nera tokio user");
+        console.log("Tokio vartotojo nera")
+        alert("User is not exist");
+        let nickname = document.getElementById("name").style.border = "2px solid var(--business)";
+        let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
       }
     }
   }
 });
-
-// const registerBtn = document.getElementById("rgstr_btn");
-// const loginBtn = document.getElementById("login_btn");
-
-// const chooseRegisterForm = document.querySelector("#chooseRegisterForm");
-// const chooseLoginForm = document.querySelector("#chooseLoginForm");
-
-// chooseLoginForm.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   const registerBtn = document.getElementById("rgstr_btn");
-//   const loginBtn = document.getElementById("login_btn");
-//   const helperText = document.getElementById("helperText");
-//   const greetingTitle = document.getElementById("greetingTitle");
-//   helperText.style.display = "none";
-//   greetingTitle.innerHTML = "Log in";
-//   registerBtn.setAttribute("id", "login_btn");
-// });
-// chooseRegisterForm.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   const registerBtn = document.getElementById("rgstr_btn");
-//   const loginBtn = document.getElementById("login_btn");
-//   const helperText = document.getElementById("helperText");
-//   const greetingTitle = document.getElementById("greetingTitle");
-//   helperText.style.display = "block";
-//   greetingTitle.innerHTML = "Sign up";
-//   loginBtn.setAttribute("id", "rgstr_btn");
-// });
-
-// loginBtn.addEventListener("click", (e) => {
-//   // e.preventDefault();
-//   let nickname = document.getElementById("name").value;
-//   let pw = document.getElementById("pw").value;
-//   const peopleArray = JSON.parse(localStorage.getItem("nameAndPassword"));
-//   // console.log(peopleArray[0].name);
-//   console.log("Veikia");
-//   for (i = 0; i < peopleArray.length; i++) {
-//     if (peopleArray[i].name === nickname) {
-//       if (peopleArray[i].password === pw) {
-//         console.log("You logged in");
-//         window.location.href = "main.html";
-//         break;
-//       } else {
-//         console.log("wrong password");
-//       }
-//     } else {
-//       console.log("wrong nickname");
-//     }
-//   }
-// });
-// registerBtn.addEventListener("click", (e) => {
-//   // e.preventDefault();
-//   let nickname = document.getElementById("name").value;
-//   let pw = document.getElementById("pw").value;
-//   const peopleData = {
-//     name: nickname,
-//     password: pw,
-//   };
-
-//   const peopleArray = JSON.parse(localStorage.getItem("nameAndPassword")) || [];
-//   peopleArray.push(peopleData);
-//   localStorage.setItem("nameAndPassword", JSON.stringify(peopleArray));
-// });
-
-//////////////////////////////////////////////////////////////////////////
-// function registerBtn {
-//   var nickname = document.getElementById("name");
-//   var pw = document.getElementById("pw");
-//   const peopleData = {
-//     name: "nickname.value",
-//     password: "pw.value",
-//   };
-
-//   // var lowerCaseLetters = /[a-z]/g;
-//   // var upperCaseLetters = /[A-Z]/g;
-
-//   // if (name.value.length == 0) {
-//   //   alert("Please fill in email");
-//   // } else if (pw.value.length == 0) {
-//   //   alert("Please fill in password");
-//   // } else if (name.value.length == 0 && pw.value.length == 0) {
-//   //   alert("Please fill in email and password");
-//   // } else if (!pw.value.match(numbers)) {
-//   //   alert("please add 1 number");
-//   // } else if (!pw.value.match(upperCaseLetters)) {
-//   //   alert("please add 1 uppercase letter");
-//   // } else {
-//   //   alert("Your account has been created");
-//   // }
-
-//   localStorage.setItem(JSON.stringify(peopleData));
-//   console.log("works");
-// }
-
-//checking
-// function check() {
-//   var storedName = localStorage.getItem("name");
-//   var storedPw = localStorage.getItem("pw");
-
-//   var userName = document.getElementById("userName");
-//   var userPw = document.getElementById("userPw");
-//   // var userRemember = document.getElementById("rememberMe");
-
-//   if (userName.value == storedName && userPw.value == storedPw) {
-//     alert("You are logged in.");
-//   } else {
-//     alert("Error on login");
-//   }
-// }

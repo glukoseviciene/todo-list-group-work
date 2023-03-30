@@ -137,8 +137,7 @@ h4 {
 }
 .create-user #form-login .input-container input {
   width: 15rem;
-  border: 2px solid var(--business);
-  box-shadow: var(--business-glow);
+  border: 2px solid var(--dark);
   color: var(--dark);
   font-size: 1.125rem;
   margin-block: 10px;
