@@ -14,6 +14,6 @@ export function addStarClickListener(star, todoItem) {
   });
 }
 
-const element = document.getElementById("myButton"); // Get a reference to the element you want to click
-const event = new MouseEvent("click", { bubbles: true }); // Create a new click event
-element.dispatchEvent(event); // Dispatch the event on the element
+// const element = document.getElementById("myButton"); // Get a reference to the element you want to click
+// const event = new MouseEvent("click", { bubbles: true }); // Create a new click event
+// element.dispatchEvent(event); // Dispatch the event on the element
