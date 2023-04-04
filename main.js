@@ -18,6 +18,7 @@ window.addEventListener("load", () => {
       content: e.target.elements.content.value,
       category: e.target.elements.category.value,
       done: false,
+      favoriteStar: false,
       createdAt: new Date().getTime(),
     };
 
@@ -107,14 +108,27 @@ function DisplayTodos() {
     star.style.marginLeft = "7px";
     label.style.display = "flex";
 
+    if (todo.favoriteStar === true) {
+      star.style.color = "gold";
+      todoItem.id = "favoriteOn";
+    }
+    if (todo.favoriteStar === false) {
+      star.style.color = "red";
+      todoItem.id = "favoriteOff";
+    }
+
     star.addEventListener("click", (e) => {
       e.preventDefault();
       todoItem.id = todoItem.id === "favoriteOn" ? "favoriteOff" : "favoriteOn";
       if (todoItem.id === "favoriteOn") {
         star.style.color = "gold";
+        todo.favoriteStar = true;
       } else if (todoItem.id === "favoriteOff") {
         star.style.color = "red";
+        todo.favoriteStar = false;
       }
+
+      localStorage.setItem("todos", JSON.stringify(todos));
     });
 
     favoritesBtn.addEventListener("click", (e) => {

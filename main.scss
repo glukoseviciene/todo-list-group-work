@@ -83,6 +83,7 @@ h4 {
   background-color: rgba(238, 238, 238, 0.8);
   border-radius: 0.5rem;
   margin-inline: 20px;
+  margin: auto;
   margin-top: 12rem;
 }
 
@@ -300,3 +301,11 @@ input:checked ~ .bubble::after {
   font-weight: 500;
   cursor: pointer;
 }
+
+// .favorites-color-star {
+//   color: red;
+// }
+
+// .favorites-color-star.done {
+//   color: gold;
+// }
