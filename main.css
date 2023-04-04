@@ -85,8 +85,8 @@ h4 {
   background-color: rgba(238, 238, 238, 0.8);
   border-radius: 0.5rem;
   margin-inline: 20px;
+  margin: auto;
   margin-top: 12rem;
-  box-shadow: 7px 7px rgba(188, 188, 184, 0.578);
 }
 
 .greeting .title {
@@ -111,7 +111,6 @@ h4 {
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
   margin-bottom: 1.5rem;
-  box-shadow: 6px 4px rgba(0, 0, 0, 0.386)
 }
 .create-todo .options {
   display: grid;
@@ -129,7 +128,6 @@ h4 {
   box-shadow: var(--shadow);
   border-radius: 0.5rem;
   cursor: pointer;
-  box-shadow: 6px 4px rgba(0, 0, 0, 0.386);
 }
 .create-todo .options label div {
   color: var(--dark);
@@ -149,7 +147,6 @@ h4 {
   border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.2s ease-out;
-  box-shadow: 10px 7px rgba(45, 46, 62, 0.48);
 }
 .create-todo input[type=submit]:hover {
   opacity: 0.75;

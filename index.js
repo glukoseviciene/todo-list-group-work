@@ -40,38 +40,44 @@ submitBtn.addEventListener("click", (e) => {
     // PASSWORDS
     let format = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/.test(pw);
     if (!format) {
-      alert("Check your password format")
+      alert("Check your password format");
       return;
-    }
-    else if (pw !== pwConfirm) {
+    } else if (pw !== pwConfirm) {
       alert("Passwords do not match");
-      let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
-      let pwConfirm = document.getElementById("pw_confirm").style.border = "2px solid var(--business)";
+      let pw = (document.getElementById("pw").style.border =
+        "2px solid var(--business)");
+      let pwConfirm = (document.getElementById("pw_confirm").style.border =
+        "2px solid var(--business)");
       return;
-    }
-    else if ((pw.length < 8) && (pwConfirm.length < 8)) {
+    } else if (pw.length < 8 && pwConfirm.length < 8) {
       alert("Must be atleast 8 characters long");
-      let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
-      let pwConfirm = document.getElementById("pw_confirm").style.border = "2px solid var(--business)";
+      let pw = (document.getElementById("pw").style.border =
+        "2px solid var(--business)");
+      let pwConfirm = (document.getElementById("pw_confirm").style.border =
+        "2px solid var(--business)");
       return;
-    }
-    else if(pw == "") {
+    } else if (pw == "") {
       alert("Please enter Password");
-      let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
-      let pwConfirm = document.getElementById("pw_confirm").style.border = "2px solid var(--business)";
+      let pw = (document.getElementById("pw").style.border =
+        "2px solid var(--business)");
+      let pwConfirm = (document.getElementById("pw_confirm").style.border =
+        "2px solid var(--business)");
       return;
-    }
-    else if((pw == "") && (nickname == "")) {
+    } else if (pw == "" && nickname == "") {
       alert("Please enter Username and Password");
-      let nickname = document.getElementById("name").style.border = "2px solid var(--business)";
-      let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
-      let pwConfirm = document.getElementById("pw_confirm").style.border = "2px solid var(--business)";
+      let nickname = (document.getElementById("name").style.border =
+        "2px solid var(--business)");
+      let pw = (document.getElementById("pw").style.border =
+        "2px solid var(--business)");
+      let pwConfirm = (document.getElementById("pw_confirm").style.border =
+        "2px solid var(--business)");
       return;
     }
     // NICKNAME
-    else if(nickname == "") {
+    else if (nickname == "") {
       alert("Please enter Username");
-      let nickname = document.getElementById("name").style.border = "2px solid var(--business)";
+      let nickname = (document.getElementById("name").style.border =
+        "2px solid var(--business)");
       return;
     }
     const peopleData = {
@@ -84,7 +90,6 @@ submitBtn.addEventListener("click", (e) => {
     alert("Priregistruota");
   } else {
     for (i = 0; i < peopleArray.length; i++) {
-
       if (peopleArray[i].name === nickname) {
         if (peopleArray[i].password === pw) {
           console.log("Prijungta");
@@ -93,15 +98,17 @@ submitBtn.addEventListener("click", (e) => {
         } else {
           console.log("Blogas pw");
           alert("Incorrect or empty password");
-          let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
+          let pw = (document.getElementById("pw").style.border =
+            "2px solid var(--business)");
           break;
         }
-        
       } else if (i === peopleArray.length - 1) {
-        console.log("Tokio vartotojo nera")
+        console.log("Tokio vartotojo nera");
         alert("User is not exist");
-        let nickname = document.getElementById("name").style.border = "2px solid var(--business)";
-        let pw = document.getElementById("pw").style.border = "2px solid var(--business)";
+        let nickname = (document.getElementById("name").style.border =
+          "2px solid var(--business)");
+        let pw = (document.getElementById("pw").style.border =
+          "2px solid var(--business)");
       }
     }
   }
