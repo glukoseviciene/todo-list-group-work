@@ -13,8 +13,5 @@ describe("Remove input attribute and focus", () => {
         edit.addEventListener("click", () => {
             editButtonClickListener(edit, todoItem);
         });
-
-        edit.dispatchEvent(event);
-    })
+    });
 });
-// expect(edittest(input.removeAttribute("readonly"), input.focus())).toBe(todo.content = e.input.value);
