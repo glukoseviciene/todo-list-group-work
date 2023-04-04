@@ -14,7 +14,5 @@ describe("deleteButtonClickListener", () => {
     deleteButton.addEventListener("click", () => {
       deleteButtonClickListener(deleteButton, todoItem);
     });
-
-    deleteButton.dispatchEvent(event);
   });
 });
