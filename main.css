@@ -272,3 +272,16 @@ input:checked ~ .bubble::after {
   font-weight: 500;
   cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
+
+@media only screen and (max-width: 375px) {
+  .todo-content {
+    width: 40%;
+
+  }
+}
+@media only screen and (max-width: 435px) {
+  .todo-content {
+    width: 40%;
+
+  }
+}
