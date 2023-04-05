@@ -20,6 +20,7 @@ window.addEventListener("load", () => {
       done: false,
       favoriteStar: false,
       createdAt: new Date().getTime(),
+      author: localStorage.getItem("username"),
     };
 
     todos.push(todo);
@@ -28,18 +29,20 @@ window.addEventListener("load", () => {
 
     // Reset the form
     e.target.reset();
-
     DisplayTodos();
   });
 
   DisplayTodos();
 });
-
 function DisplayTodos() {
   const todoList = document.querySelector("#todo-list");
   todoList.innerHTML = "";
 
-  todos.forEach((todo) => {
+  const authorsPosts = todos.filter(
+    (todo) => todo.author === localStorage.getItem("username")
+  );
+  console.log(authorsPosts);
+  authorsPosts.forEach((todo) => {
     const todoItem = document.createElement("div");
     todoItem.classList.add("todo-item");
 
